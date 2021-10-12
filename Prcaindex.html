@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="external.css">
+        <!-- <style>
+            body { background-color: rgb(19, 190, 168);}
+            label{
+                font-size: 30px;
+            }
+        </style> -->
+    </head>
+    <body>
+       <h1>Backtracking!</h1>
+       <p>Copyright &copy;2002 by David Matuszek</p>
+<p>Backtracking is a form of recursion.</p> 
+<p>The usual <em>scenario</em> is that you are faced with a <im>number</im> of options, and you must choose one of these. After you make your choice you will get a new set of options; just what set of options you get depends on what choice you made. This procedure is repeated over and over until you reach a final state. If you made a good sequence of choices, your final state is a goal state; if you didn't, it isn't.</p>
+<p>Conceptually, you start at the root of a tree; the tree <del>probably</del> has some good leaves and some bad leaves, though it may be that the leaves are all good or all bad. You want to get to a good leaf. At each node, beginning with the root, you choose one of its children to move to, and you keep this up until you get to a leaf.</p>
+<p>Suppose you <ins>gets to a</ins> <strong>bad leaf</strong>. <br />You can <b>backtrack</b>to continue the search for a good leaf by revoking your most recent choice, and trying out the next option in that set of options. If you run out of options, revoke the choice that got you here, and try another choice at that node. If you end up at the root with no options left, there are no good leaves to be found.</p>
+<p>This needs an example.</p>
+<center><img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/treesearch.gif "/></center>
+<img src="treesearch.gif"/>
+<hr/>
+<ol><li>Starting at Root, your options are A and B. You choose A.</li><li>
+At A, your options are C and D. You choose C.</li><li>
+C is bad. Go back to A.</li><li>
+At A, you<sub> help</sub> have already tried C<sup>th</sup>, and it failed. Try D.</li><li>
+D is bad. Go back to A.</li><li>
+At A, you have no options left to try. Go back to Root.</li><li>
+At Root, you have already tried A. Try B.</li><li>
+At B, <strike>styling</strike>your options are E and F. Try E.</li><li>
+E is good. Congratulations!</li></ol>
+<p>In this example we drew a picture of a tree. The tree is an abstract model of the possible sequences of choices we could make. There is also a data structure called a tree, but usually we don't have a data structure to tell us what choices we have. (If we do have an actual tree data structure, backtracking on it is called depth-first tree searching.)
+</p>
+
+<h2>The backtracking algorithm.</h2>
+<p>Here is the algorithm (in pseudocode) for doing backtracking from a given node n:</p>
+<pre>
+    boolean solve(Node n) {
+    if n is a leaf node {
+        if the leaf is a goal node, return true
+        else return false
+    } else {
+        for each child c of n {
+            if solve(c) succeeds, return true
+        }
+        return false
+    }
+}
+</pre>
+<a href="https://www.amazon.in/"> go to amazon </a>
+<a href="author.html"> about author</a>
+<a href="https://prepbytes.com/">Go to prepbytes</a>
+
+<form>
+    <fieldset>
+        <legend>login Form</legend>
+    <label> user name</label>
+    <br>
+    <input type="text" id="username">
+    <br>
+    <label> password </label>
+    <br>
+    <input type="text" value="default pass" id="password" style="color:brown;">
+    <br>
+    <label> Are you sure?</label>
+    <input type="checkbox">
+    <br>
+    <input type="button" value="submit">
+    <br>
+    <label style="color: red;">design1</label>
+    <br>
+    <label style="color: rgb(241, 131, 192);">design2</label>
+    <div> this is div tag1</div>
+    <div>this div tag 2</div>
+    <span>this is span1</span>
+    <span>this is span2</span>
+    </fieldset>
+</form>
+<div class ="nanme"> here will be a image displayed</div>
+</body>
+</html>
