@@ -45,7 +45,7 @@ img{
 }
 
 #headerID p{
-    color:rgb(250, 132, 250);
+    color:rgb(252, 156, 252);
 }
 
 .btn{
@@ -101,13 +101,38 @@ img{
     background-color: black;
     color: #fff;
     display: flex;
-    padding: 1em;
+    padding: 2em;
 }
-#footer div:first-child{
-    margin-right: auto;
-}
-#footer div :last-child{
+#footer div:last-child{
     margin-left: auto;
 
 }
+@media only screen and (max-width: 600px){
+    #section-b ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        justify-content: space-around;
+    }
 
+    #section-b li{
+        background: #fff;
+        color: #333;
+        width: 100%;
+        margin-bottom: 1em;
+        }
+
+        #section-d{
+            display: block;
+        }
+        #footer{
+            background: black;
+            color: #fff;
+            display: block;
+            padding: 2em;
+        }
+        #footer div:last-child{
+            margin-top: 2em;
+        }
+}
