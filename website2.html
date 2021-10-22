@@ -3,7 +3,104 @@
     <link rel="stylesheet" href="website2.css">
 </head>
 <body>
-    <header>
-        
-    </header>
+    <div class="wrapper">
+        <nav class="menu">
+            <button aria-expanded="false" aria-controls="Menu list" >
+                <span class="open">&#9776</span>
+                <span class="close">&#9747</span>
+              Menu 
+            </button>
+            <ul id="menu list">
+                <li>
+                    <a href="">Tacos</a>
+                </li>
+                <li>
+                    <a href="">Beers</a>
+                </li>
+                <li>
+                    <a href="">Wines</a>
+                </li>
+                <li>
+                    <a href="">Desserts</a>
+                </li>
+                <li>
+                    <a href="">Reservations</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="top">
+        <header class="hero">
+            <h1>Terry's Taco Joint</h1>
+            <p>Pretty Good Tacos!</p>
+        </header>
+        <div class="cta cost1">
+            <p class="price">&#36;1.69</p>
+            <p>Tacos</p>
+        </div>
+        <div class="cta cost2">
+            <p class="price">&#36;3.99</p>
+            <p>Kombucha</p>
+        </div>
+    </div>
+    <section class="features">
+        <div class="features">
+            <span class="icon"> &#127790; </span>
+            <h3>Tacos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="features">
+            <span class="icon">&#127866;</span>
+            <h3>Bear</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="features">
+            <span class="icon">&#127863;</span>
+            <h3>Wine</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="features">
+            <span class="icon">&#127926;</span>
+            <h3>Music</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>    
+    </section>
+    <section class="about">
+        <img src="https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/queso-taco.png" alt="yummy tacos" class="about_mockup">
+        <div class="about_details">
+            <h1>Featured Tacos</h1>
+            <p>Slim Profile, easy to hold and loaded with cheese.</p>
+            <p>This is the one you have been waiting for</p>
+            <button>Learn More</button>
+
+        </div>
+    </section>
+    
+    <section class="gallery">
+        <h2>Instant Grams</h2>
+        <img src="https://source.unsplash.com/random/201x201" alt="image">
+        <img src="https://source.unsplash.com/random/202x202" alt="image">
+        <img src="https://source.unsplash.com/random/203x203" alt="image">
+        <img src="https://source.unsplash.com/random/204x204" alt="image">
+        <img src="https://source.unsplash.com/random/205x205" alt="image">
+        <img src="https://source.unsplash.com/random/206x206" alt="image">
+        <img src="https://source.unsplash.com/random/207x207" alt="image">
+        <img src="https://source.unsplash.com/random/207x208" alt="image">
+        <img src="https://source.unsplash.com/random/207x209" alt="image">
+        <img src="https://source.unsplash.com/random/207x210" alt="image">
+      </section>
+    </div>
+  
+    <script>
+      const navButton = document.querySelector('button[aria-expanded]');
+  
+      function toggleNav({ target }) {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded', !expanded);
+      }
+  
+      navButton.addEventListener('click', toggleNav);
+    </script>
+  
+    
 </body>
